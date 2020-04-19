@@ -1,3 +1,1 @@
-# leetcode
-
-keep leetcode everyday!!!
+# Algorithms-Leetcode
