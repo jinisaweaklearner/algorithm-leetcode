@@ -1,6 +1,8 @@
+
 class MyStack(object):
 
     def __init__(self):
+        # create a queue
         self.q = deque()
 
     def push(self, x):
@@ -8,6 +10,7 @@ class MyStack(object):
         :type x: int
         :rtype: None
         """
+        # append value to last
         self.q.append(x)
         
 
@@ -16,7 +19,9 @@ class MyStack(object):
         :rtype: int
         """
         for i in range(len(self.q)-1):
+            # pop the first one and append to the last
             self.q.append(self.q.popleft())
+        # pop the last one
         return self.q.popleft()
         
 
