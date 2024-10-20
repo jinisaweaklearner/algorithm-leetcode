@@ -25,3 +25,23 @@ class Solution(object):
         # At last, we check if the stack is empty or not...
         # If the stack is empty it means every opened parenthesis is being closed and we can return true, otherwise we return false...
         return len(stack) == 0
+    
+
+
+class Solution(object):
+    def isValid(self, s):
+        valid_dict = {')':'(',  '}':'{', ']':'['}
+        output = []
+
+        for i in s:
+            if i in valid_dict.values():
+                output.append(i)
+            elif len(output) == 0:
+                return False
+            else:
+                # if the value is matched
+                if valid_dict[i] == output[-1]:
+                    output.pop()
+                else:
+                    return False
+        return len(output) == 0
