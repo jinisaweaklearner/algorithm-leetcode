@@ -3,7 +3,7 @@ class Solution:
 
         mapping = dict()
 
-        # store index
+        # store index and overwrite the index the large numer
         for i,v in enumerate(nums):
             mapping[v] = i
 
@@ -14,6 +14,5 @@ class Solution:
             val = target - nums[i]
             
             # make sure the value we are looking for is in mapping
-            # also the index is different to aovid dup
             if val in mapping and i != mapping[val]:
                 return [i, mapping[val]]
