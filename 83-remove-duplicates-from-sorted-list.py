@@ -15,6 +15,7 @@ class Solution(object):
         while current is not None and current.next is not None:            
             if current.val == current.next.val:
                 # skip one if they are the same
+                # keep the current val, but skip the next one value
                 current.next = current.next.next
             else:
                 # move to the next
